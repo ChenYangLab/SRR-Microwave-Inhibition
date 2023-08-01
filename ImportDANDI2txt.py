@@ -22,8 +22,8 @@ with DandiAPIClient() as client:
     # Loop over all nwb files in DANDI
     for asset in dataset.get_assets():
         filepath = f"./{asset.path.split('/')[-1]}"
+        print(f"Downloading {filepath}")
         asset.download(filepath)
-        print(f"Downloaded {filepath}")
 
         # Create directory for each file
         with NWBHDF5IO(filepath, 'r') as io:
