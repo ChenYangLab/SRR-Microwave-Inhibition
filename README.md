@@ -1,7 +1,6 @@
 # SRR Microwave Inhibition
 ## Thesis Defense Data
-_Data can be downloaded directly from DANDI using the included sh file. Otherwise, see DANDISET 000615_  
-The included MATLAB (_2023a_) script was used assuming a directory structure of _../**Experiment Date**/Raw Text Data_ with .txt files
+The included MATLAB (_2023a_) script was used assuming a set of .txt files inside a directory structure. **To avoid any errors, using the included python script to generate the proper directory structure and file formats directly _(The file structure will be downloaded and established in the execution directory)_.**
 ### Data Set Parameters:
 |04-11-2022|05-26-2022|07-06-2022|
 |:---:|:---:|:---:|
