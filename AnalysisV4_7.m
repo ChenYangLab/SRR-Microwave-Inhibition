@@ -212,16 +212,16 @@ function FilePath = GetFilePath(ScreenSize)
     if ~isempty(ExistingCheck)
         return
     end
-    PromptFig = uifigure('Position',[(ScreenSize(3)-350)/2 (ScreenSize(4)-150)/2 350 150],'Name','Loading convereted IGOR files');
-    PromptGrid = uigridlayout(PromptFig,[4,1],'RowHeight',{'fit','fit','fit'});
-    uilabel(PromptGrid,'Text','Select folder with .txt converted IGOR waves');
-    uibutton(PromptGrid,'Text','Select Folder','ButtonPushedFcn',@(~,~)FolderSelect);
-    uibutton(PromptGrid,'Text','Select .nwb File','Enable','off');
+    PromptFig = uifigure('Position',[(ScreenSize(3)-350)/2 (ScreenSize(4)-100)/2 350 100],'Name','Loading convereted IGOR files');
+    PromptGrid = uigridlayout(PromptFig,[2,1],'RowHeight',{'fit','fit','fit'});
+    uilabel(PromptGrid,'Text','Select converted IGOR waves');
+    uibutton(PromptGrid,'Text','Select .txt Folder','ButtonPushedFcn',@(~,~)FolderSelect);
     uibutton(PromptGrid,'Text','Cancel','ButtonPushedFcn',@(~,~)SessionEnd,'FontWeight','Bold');
     uiwait(PromptFig)
 
     function FolderSelect()
-        Path = uigetdir('\\engnas.bu.edu\research\eng_research_yanglab\yang lab\Data\A_Mark_MC\Crayfish MW\Experimental Data');
+        %Path = uigetdir('\\engnas.bu.edu\research\eng_research_yanglab\yang lab\Data\A_Mark_MC\Crayfish MW\Experimental Data');
+        Path = uigetdir();
         if Path ~= 0
             FilePath = Path;
             uiresume(PromptFig)
@@ -230,6 +230,7 @@ function FilePath = GetFilePath(ScreenSize)
             SessionEnd();
         end
     end
+
     function SessionEnd()
         FilePath = '';
         uiresume(PromptFig)
