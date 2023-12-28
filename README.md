@@ -1,6 +1,6 @@
 # SRR Microwave Inhibition
 ## Thesis Defense Data
-Data was convereted from acquired IGOR Pro 7 .pxp to .txt and can be downloaded here directly, through included shell and python scripts from a DANDI server, or from the DANDI server directly (_in .nwb format_). Experimental details are included below. The version of the MATLAB script used to generate the analyses is included as well. The final thesis can be found on the Boston University archive here **[linked after publication by Mugar Library]**.
+Data was convereted from acquired IGOR Pro 7 .pxp to .txt and can be downloaded here directly, through included shell and python scripts from a DANDI server, or from the DANDI server directly (_in .nwb format_). Experimental details are included below. The version of the MATLAB script used to generate the analyses is included as well. The final thesis can be found on the Boston University archive [here](https://open.bu.edu/handle/2144/46637).
 ### Data Set Parameters:
 |04-11-2022|05-26-2022|07-06-2022|
 |:---:|:---:|:---:|
